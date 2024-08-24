@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Button, SectionList, StyleSheet, Text, TextInput, FlatList, View } from 'react-native';
+import SalesInterface from './screens/SalesInterface';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -101,6 +102,7 @@ function HomeTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Order" component={OrderScreen} />
+      <Tab.Screen name="New Order" component={SalesInterface} />
       <Tab.Screen name="Menu" component={MenuScreen} />
       <Tab.Screen name="Inventory" component={InventoryScreen} />
     </Tab.Navigator>
@@ -193,7 +195,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 2,
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: 'bold',
     backgroundColor: 'rgba(247,247,247,1.0)',
   },
