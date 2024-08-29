@@ -69,7 +69,7 @@ export default function SalesInterface() {
                     <Text style={styles.cancelText}>CHECKOUT</Text>
                 </TouchableOpacity>
                 <View style={{paddingTop: 10}}>
-                    <TouchableOpacity style={styles.cancel} onPress={() => {}}>
+                    <TouchableOpacity style={styles.cancel} onPress={() => {setCartItems([])}}>
                         <Text style={styles.cancelText}>CLEAR ORDERS</Text>
                     </TouchableOpacity>
                 </View>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     checkout: {
         backgroundColor: 'green',
         // paddingTop: 10,
-        height: 50,
+        height: 30,
         alignItems: 'center',
         justifyContent: 'center',
         borderwidth: 2,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     cancel: {
         backgroundColor: 'orange',
         // paddingTop: 10,
-        height: 50,
+        height: 30,
         alignItems: 'center',
         justifyContent: 'center',
         borderwidth: 2,
